@@ -9,7 +9,7 @@
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Hotel</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="{{url('/hotel/historia')}}">Historia</a>
-          <a class="dropdown-item" href="{{url('/hotel/vision')}}">Misión y Visión</a>
+          <a class="dropdown-item" href="{{url('/hotel/mision-vision')}}">Misión y Visión</a>
           <a class="dropdown-item" href="{{url('/hotel/ubicación')}}">Ubicación</a>
         </div>
       </li>

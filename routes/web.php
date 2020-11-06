@@ -21,7 +21,7 @@ Route::get('/hotel/historia', function () {
     return view('hotel.historia');
 });
 //hotel mision vision
-Route::get('/hotel/vision', function () {
+Route::get('/hotel/mision-vision', function () {
     return view('hotel.vision');
 });
 //Hotel Ubicacion
