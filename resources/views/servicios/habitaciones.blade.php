@@ -1,41 +1,24 @@
 @extends('layout.master')
 @section('content')
-    
+    <h4 style="text-align: center;">Habitaciones Registradas</h4>
+    <br>
     <div class="container">
         <div class="row">
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{url('/img/07.jpg')}}" class="card-img-top" alt="...">
+            @foreach($habitaciones as $h)
+            <div class="col-md-4" >
+                <div class="card" style="width: 15rem;">
+                    <img src='{{url("/img/habitaciones/$h->foto")}}' class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Habitaciones Tipo Estandar</p>
+                        <h5 class="card-title">Habitación: {{$h->numero}}</h5>
+                        <p class="card-text">Tipo: {{$h->tipo}}
+                        Camas: {{$h->numCamas}}
+                        {{$h->descripcion}}
+                        ${{$h->precio}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{url('/img/08.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Habitaciones Tipo Superior</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{url('/img/09.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Habitaciones Tipo Ejecutiva</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{url('/img/10.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Habitaciones Tipo Suite</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="{{url('/')}}" class="btn btn-primary">Inicio</a>
-  </div>
+            @endforeach
+        </div>       
+    </div>
+    <a href="{{url('/')}}" class="btn btn-primary">Inicio</a>
 @stop

@@ -22,14 +22,28 @@
           <a class="dropdown-item" href="{{url('/servicios/eventos')}}">Eventos</a>
         </div>
       </li>
-
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{url('/clientes/visualizar')}}">Vizualizar</a>
+        </div>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{{url('/reservas')}}">Reservas</a>
       </li>
-      
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('factura')}}">facturación</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('contacto')}}">Contactos</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Consultas</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{url('conhabita')}}">Habitaciones</a>
+          <a class="dropdown-item" href="{{url('consultas')}}">Clientes</a>
+        </div>
   @endif
 </ul>
