@@ -13,6 +13,14 @@
         <div class="container">
             @yield('content')
         </div>
+        <br>
+        <div>
+            <footer class="page-footer font-small " >
+                <divdiv class="p-3 mb-2 bg-light text-dark" style="max-width: 90rem;">
+                    <div class="text-info" align="center">Hailyn Dayana Mora Portillo</div>
+                </div>
+            </footer>
+        </div>
 
         <!-- Cargar archivos de Javascript -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
