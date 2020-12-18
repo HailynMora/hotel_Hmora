@@ -27,17 +27,8 @@ class HotelController extends Controller
         return view('contacto');
     }
 
-    public function consulCliente(){
-        $datos= DB::table('factura')
-            ->join('cliente', 'cliente.id', '=', 'factura.cliente')
-            ->orderBy('nombre')
-            ->get();
-        return view('consultas',[
-            'cliente' => $datos
-        ]);
-    }
-    
-    public function habita(){
+    public function consultas(){
+        
         $sencilla= DB::table('precio')
             ->where('tipo','like','%Sencilla%')
             ->count();
@@ -50,10 +41,18 @@ class HotelController extends Controller
         $suite= DB::table('precio')
             ->where('tipo','like','%Suite%')
             ->count();
-        return view('conhabita',[
-                                'senci' => $sencilla,
-                                'doble' => $doble,
-                                'triple' => $triple,
-                                'suite' => $suite]);
+        $datos= DB::table('factura')
+            ->join('cliente', 'cliente.id', '=', 'factura.cliente')
+            ->orderBy('id')
+            ->get();
+        return view('consultas',[
+            'cliente' => $datos,
+            'senci' => $sencilla,
+            'doble' => $doble,
+            'triple' => $triple,
+            'suite' => $suite
+        ]);
     }
+    
+   
 }

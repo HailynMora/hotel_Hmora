@@ -39,8 +39,7 @@ Route::get('reservas', [ReservasController::class, 'getReservas']);
 Route::get('contacto',  [HotelController::class, 'showContactos']);
 Route::get('/clientes/visualizar', [ClientesController::class, 'showClientes']);
 Route::get('factura', [FacturacionController::class, 'getFactura']);
-Route::get('consultas',  [HotelController::class, 'consulCliente']);
-Route::get('conhabita',  [HotelController::class, 'habita']);
+Route::get('consultas',  [HotelController::class, 'consultas']);
 
 
 
